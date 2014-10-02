@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="com.telerik.stripe" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="com.telerik.stripe" version="1.0.3" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Stripe</name>
+
+    <!--preference name="API_KEY" /-->
 
     <js-module name="stripe" src="www/stripe.js">
         <clobbers target="stripe" />
@@ -34,7 +36,7 @@
 
       <config-file target="*-Info.plist" parent="ApiKey">
           <!-- replace with your Stripe API Key -->
-          <string>sk_test_tBW6hJqEHSwxeSSnno6HFGWW</string>
+          <string>YOUR_API_SECRET_KEY</string>
       </config-file>
  
     </platform>
@@ -45,7 +47,7 @@
 
       <config-file target="res/values/stripe.xml" parent="/*">
           <!-- replace with your Stripe API Key -->
-          <string name="api_key">sk_test_tBW6hJqEHSwxeSSnno6HFGWW</string>
+          <string name="api_key">YOUR_API_SECRET_KEY</string>
       </config-file>
 
 		  <config-file target="res/xml/config.xml" parent="/*">

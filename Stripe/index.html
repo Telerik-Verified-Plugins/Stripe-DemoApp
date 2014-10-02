@@ -30,7 +30,11 @@
         </div>
         <h3>Stripe Plugin Demo</h3>
         <p>
-            The Stripe plugin allows you to ..
+            The Stripe plugin offers easy access to the Stripe REST-based API.
+        </p>
+        <p>
+            Because the API has similar methods for interaction with the various objects,
+            this demo only shows how to perform CRUD operations on the Customers object.
         </p>
         <p>
             <strong>Important</strong><br/>
@@ -55,9 +59,13 @@
         <div class="demo">
             <h3 class="hassubtitle">Customers</h3>
             <div class="subtitle">
-                TODO some nice explanation?
+                Here you can try a few CRUD operations on the Customers object.
+                Make sure you're connected to a <strong>test account</strong> so no actual Customers are affected.
             </div>
-            <button data-role="button" class="button" data-bind="click: listCustomers">List customers (max 2)</button>
+            <button data-role="button" class="button" data-bind="click: createCustomer">Create customer</button>
+            <button data-role="button" class="button" data-bind="click: listCustomers">List customers, max 2</button>
+            <button data-role="button" class="button" data-bind="click: updateCustomer">Update customer</button>
+            <button data-role="button" class="button" data-bind="click: deleteCustomer">Delete the first customer in the list</button>
         </div>        
     </div>
 

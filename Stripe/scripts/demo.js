@@ -4,13 +4,77 @@
 
     DemoViewModel = kendo.data.ObservableObject.extend({
 
+        createCustomer: function () {
+            if (!this.checkSimulator()) {
+                // https://stripe.com/docs/api#create_customer
+                stripe.customers.create(
+                    {
+                        description : "John Doe",
+                        email :  "john@telerik.com"
+                    },
+                    function (response) {alert("Customer created:\n\n" + JSON.stringify(response))}
+                );
+            }
+        },
+
         listCustomers: function () {
             if (!this.checkSimulator()) {
+                // https://stripe.com/docs/api#list_customers
                 stripe.customers.list(
                     {
-                        limit : 2
+                        limit : "2"
                     },
-                    function (msg) {alert(JSON.stringify(msg))}
+                    function (response) {alert(JSON.stringify(response))}
+                );
+            }
+        },
+
+        updateCustomer: function () {
+            if (!this.checkSimulator()) {
+                // https://stripe.com/docs/api#list_customers
+                stripe.customers.list(
+                    {
+                        limit : 1
+                    },
+                    function (response) {
+                        if (response.data.length == 0) {
+                            alert("Please create a customer first.");
+                        } else {
+                            // https://stripe.com/docs/api/curl#update_customer
+                            alert("Updating the description of customer with id: " + response.data[0].id)
+                            stripe.customers.update(
+                                response.data[0].id,
+                                {
+                                    description : "Updated at " + new Date()
+                                },
+                                function(response) {
+                                    alert("Customer updated:\n\n" + JSON.stringify(response));
+                                });
+                        }
+                    }
+                );
+            }
+        },
+
+        deleteCustomer: function () {
+            if (!this.checkSimulator()) {
+                // https://stripe.com/docs/api#list_customers
+                stripe.customers.list(
+                    {
+                        limit : 1
+                    },
+                    function (response) {
+                        if (response.data.length == 0) {
+                            alert("Please create a customer first.");
+                        } else {
+                            // https://stripe.com/docs/api#delete_customer
+                            alert("Removing customer with id: " + response.data[0].id)
+                            stripe.customers.remove(response.data[0].id,
+                                function(response) {
+                                    alert("Customer removed:\n\n" + JSON.stringify(response));
+                                });
+                        }
+                    }
                 );
             }
         },
