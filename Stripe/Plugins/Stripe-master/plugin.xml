@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.telerik.stripe" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Stripe</name>
+
+    <js-module name="stripe" src="www/stripe.js">
+        <clobbers target="stripe" />
+    </js-module>
+
+    <js-module name="charges" src="www/charges.js">
+        <clobbers target="stripe.charges" />
+    </js-module>
+
+    <js-module name="customers" src="www/customers.js">
+        <clobbers target="stripe.customers" />
+    </js-module>
+
+    <js-module name="recipients" src="www/recipients.js">
+        <clobbers target="stripe.recipients" />
+    </js-module>
+
+    <js-module name="transfers" src="www/transfers.js">
+        <clobbers target="stripe.transfers" />
+    </js-module>
+
+    <platform name="ios">
+  		<config-file parent="/*" target="config.xml">
+  			<feature name="Stripe">
+  				<param name="ios-package" value="CDVStripe" />
+  			</feature>
+  		</config-file>
+
+  		<header-file src="src/ios/CDVStripe.h" />
+  		<source-file src="src/ios/CDVStripe.m" />
+
+      <config-file target="*-Info.plist" parent="ApiKey">
+          <!-- replace with your Stripe API Key -->
+          <string>sk_test_tBW6hJqEHSwxeSSnno6HFGWW</string>
+      </config-file>
+ 
+    </platform>
+
+    <platform name="android">
+
+		<source-file src="src/android/res/values/stripe.xml" target-dir="res/values" />
+
+      <config-file target="res/values/stripe.xml" parent="/*">
+          <!-- replace with your Stripe API Key -->
+          <string name="api_key">sk_test_tBW6hJqEHSwxeSSnno6HFGWW</string>
+      </config-file>
+
+		  <config-file target="res/xml/config.xml" parent="/*">
+
+			<feature name="Stripe">
+           		<param name="android-package" value="com.telerik.stripe.StripePlugin"/>
+         	</feature>
+     	</config-file>
+
+     	<source-file src="src/android/StripePlugin.java"  target-dir="src/com/telerik/stripe" />
+
+	</platform>
+
+</plugin>
