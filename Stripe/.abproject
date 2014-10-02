@@ -1,5 +1,5 @@
 {
-  "ProjectName": "Facebook",
+  "ProjectName": "Stripe",
   "ProjectGuid": "b3d6b9dd-d1f4-4db9-a07d-b7e4088bb60e",
   "projectVersion": 1,
   "AppIdentifier": "com.telerik.plugindemo.stripe",
