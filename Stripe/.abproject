@@ -17,10 +17,10 @@
   "WP8Publisher": "",
   "WP8Capabilities": [],
   "WP8Requirements": [],
-  "WP8PublisherID": "",
-  "WP8ProductID": "",
+  "WP8PublisherID": "{86a75d57-d579-4194-a6b0-e180f595881e}",
+  "WP8ProductID": "{cd840903-0269-4a0b-90d6-1ba489c74849}",
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
-  "FrameworkVersion": "3.5.0",
+  "FrameworkVersion": "3.7.0",
   "CorePlugins": [
     "org.apache.cordova.console",
     "org.apache.cordova.device",
@@ -44,5 +44,8 @@
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
   ],
-  "Framework": "Cordova"
+  "Framework": "Cordova",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8PackageIdentityName": "1234Telerik.com.telerik.plugindemo.stripe",
+  "CordovaPluginVariables": {}
 }
