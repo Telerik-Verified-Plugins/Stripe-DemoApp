@@ -49,6 +49,11 @@ You need a Stripe API key for using this plugin, which you can obtain from [Stri
 - stripe.recipients.update
 - stripe.recipients.remove
 
+- stripe.subscriptions.create
+- stripe.subscriptions.list
+- stripe.subscriptions.retrieve
+- stripe.subscriptions.update
+- stripe.subscriptions.remove
 
 # stripe.customers.create
 
@@ -353,6 +358,76 @@ Permanently deletes a recipient. It cannot be undone.
         if (result.deleted){
            // TODO : Your Logic
         }
+      }
+    );
+
+# stripe.subscriptions.create
+
+Create a subscription for a user.
+
+## Example
+
+    stripe.subscriptions.create(
+      "cus_4sF3AyFe5RqNZk",
+      "plan_name",
+      function(subscription) {
+        // asynchronously called
+      }
+    );
+
+# stripe.subscriptions.list
+
+List all subscriptions for a customer.
+
+## Example
+
+    stripe.subscriptions.list(
+      "cus_4sF3AyFe5RqNZk",
+      function(subscriptions) {
+        // asynchronously called
+      }
+    );
+
+# stripe.subscriptions.retrieve
+
+Retrieve details for a given subscription id.
+
+## Example
+
+    stripe.subscriptions.retrieve(
+      "cus_4sF3AyFe5RqNZk",
+      "sub_5THGIl4PrybR1n",
+      function(subscription) {
+        // asynchronously called
+      }
+    );
+
+# stripe.subscriptions.update
+
+Update a subscription for a given customer id.
+
+## Example
+
+    stripe.subscriptions.update(
+      "cus_4sF3AyFe5RqNZk",
+      "sub_5THGIl4PrybR1n",
+      {plan: "-JYI_nRwd_ltcGRLnVys"},
+      function(subscription) {
+        // asynchronously called
+      }
+    );
+
+# stripe.subscriptions.remove
+
+Remove a subscription for a given customer id.
+
+## Example
+
+    stripe.subscriptions.remove(
+      "cus_4sF3AyFe5RqNZk",
+      "sub_5THGIl4PrybR1n",
+      function(result) {
+        // asynchronously called
       }
     );
 

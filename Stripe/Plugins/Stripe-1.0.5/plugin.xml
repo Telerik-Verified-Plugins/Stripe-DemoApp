@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="com.telerik.stripe" version="1.0.4" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="com.telerik.stripe" version="1.0.5" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Stripe</name>
 
     <preference name="API_KEY" />
@@ -21,6 +21,10 @@
         <clobbers target="stripe.recipients" />
     </js-module>
 
+    <js-module name="subscriptions" src="www/subscriptions.js">
+        <clobbers target="stripe.subscriptions" />
+    </js-module>
+
     <js-module name="transfers" src="www/transfers.js">
         <clobbers target="stripe.transfers" />
     </js-module>
@@ -38,7 +42,7 @@
       <config-file target="*-Info.plist" parent="ApiKey">
           <string>$API_KEY</string>
       </config-file>
- 
+ 
     </platform>
 
     <platform name="android">

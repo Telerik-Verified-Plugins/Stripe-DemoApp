@@ -47,5 +47,9 @@
   "Framework": "Cordova",
   "WP8WindowsPublisherName": "CN=Telerik",
   "WP8PackageIdentityName": "1234Telerik.com.telerik.plugindemo.stripe",
-  "CordovaPluginVariables": {}
+  "CordovaPluginVariables": {
+    "com.telerik.stripe": {
+      "API_KEY": "sk_test_tBW6hJqEHSwxeSSnno6HFGWW"
+    }
+  }
 }
