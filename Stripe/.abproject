@@ -6,8 +6,8 @@
   "DisplayName": "Stripe plugin demo",
   "Author": "Telerik",
   "Description": "Stripe-DemoApp",
-  "BundleVersion": "1.0",
-  "AndroidVersionCode": "1",
+  "BundleVersion": "1.0.1",
+  "AndroidVersionCode": "2",
   "iOSDeviceFamily": [
     "1",
     "2"
