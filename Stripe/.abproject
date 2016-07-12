@@ -22,14 +22,13 @@
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
   "FrameworkVersion": "4.0.0",
   "CorePlugins": [
-    "com.telerik.stripe@1.0.6",
     "cordova-plugin-console",
-    "cordova-plugin-crosswalk-webview@1.2.0",
     "cordova-plugin-device",
     "cordova-plugin-dialogs",
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
-    "cordova-plugin-vibration"
+    "cordova-plugin-vibration",
+    "com.telerik.stripe@1.0.8"
   ],
   "AndroidPermissions": [
     "android.permission.VIBRATE",

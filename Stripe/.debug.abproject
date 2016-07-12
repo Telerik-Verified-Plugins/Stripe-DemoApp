@@ -1,0 +1,16 @@
+{
+  "CordovaPluginVariables": {
+    "com.telerik.stripe": {
+      "API_KEY": "sk_test_tBW6hJqEHSwxeSSnno6HFGWW"
+    }
+  },
+  "CorePlugins": [
+    "cordova-plugin-console",
+    "cordova-plugin-device",
+    "cordova-plugin-dialogs",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-vibration",
+    "com.telerik.stripe@1.0.8"
+  ]
+}
